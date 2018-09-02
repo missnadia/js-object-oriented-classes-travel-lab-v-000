@@ -14,10 +14,11 @@ class Driver {
 };
 
 class Route {
-  constructor(beginningLocation, endingLocation){
-    this.beginningLocation = beginningLocation
-    this.endingLocation = endingLocation
-  }
+  constructor(beginningLocation, endingLocation) {
+    this.beginningLocation = beginningLocation;
+    this.endingLocation = endingLocation;
+  };
+
   avenueToInteger(avenue){
     return eastWest.indexOf(avenue)
   }
@@ -25,12 +26,13 @@ class Route {
     let horizontalDistance = this.avenueToInteger(this.endingLocation.horizontal) - this.avenueToInteger(this.beginningLocation.horizontal)
     let verticalDistance = this.endingLocation.vertical - this.beginningLocation.vertical
     return (Math.abs(horizontalDistance) + Math.abs(verticalDistance))
-  }
-  estimatedTime(true){
-    if(true){
-      return this.blocksTravelled() / 2
+}
+
+  estimatedTime(peak) {
+    if (peak) {
+      return this.blocksTravelled() / 2;
     } else {
-      return this.blocksTravelled() / 3
+      return this.blocksTravelled() / 3;
     };
   };
 };
