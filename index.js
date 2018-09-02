@@ -33,7 +33,11 @@ class Route {
     return horizontalBlocks + verticalBlocks
   };
 
-  estimatedTime() {
-    
+  estimatedTime(true) {
+    if (true) {
+      return this.blocksTravelled() / 2;
+    } else {
+      return this.blocksTravelled() / 3;
+    };
   };
 };
