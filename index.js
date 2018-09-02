@@ -18,6 +18,7 @@ class Route {
     this.beginningLocation = beginningLocation;
     this.endingLocation = endingLocation;
   };
+}
 /*
   calculateHorizontal(avenue) {
     return eastWest.indexOf(avenue);
