@@ -17,7 +17,7 @@ class Driver {
   yearsExperienceFromBeginningOf(year) {
     let enteredYear = new Date(year, 1, 1);
     let totalYears = (enteredYear - this.startDate) / (365*24*60*60*1000);
-    return parseInt(totalYears);
+    return totalYears;
   };
 };
 
@@ -28,6 +28,6 @@ class Route {
   };
 
   blocksTravelled() {
-
+    return
   };
 };
