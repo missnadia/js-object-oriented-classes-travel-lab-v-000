@@ -19,14 +19,15 @@ class Route {
     this.endingLocation = endingLocation;
   };
 
-  avenueToInteger(avenue){
-    return eastWest.indexOf(avenue)
-  }
-  blocksTravelled(){
-    let horizontalDistance = this.avenueToInteger(this.endingLocation.horizontal) - this.avenueToInteger(this.beginningLocation.horizontal)
-    let verticalDistance = this.endingLocation.vertical - this.beginningLocation.vertical
-    return (Math.abs(horizontalDistance) + Math.abs(verticalDistance))
-}
+  calculateHorizontal(avenue) {
+    return eastWest.indexOf(avenue);
+  };
+
+  blocksTravelled() {
+    let horizontalBlocks = this.calculateHorizontal(this.beginningLocation.horizontal) - this.calculateHorizontal(this.endingLocation.horizontal);
+    let verticalBlocks = this.beginningLocation.vertical - this.endingLocation.vertical;
+    return (Math.abs(horizontalBlocks) + Math.abs(verticalBlocks));
+  };
 
   estimatedTime(peak) {
     if (peak) {
