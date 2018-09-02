@@ -1,3 +1,4 @@
+let eastWest = ['1st Avenue', '2nd Avenue', '3rd Avenue', 'Lexington Avenue', 'Park', 'Madison Avenue', '5th Avenue'];
 class Driver {
   constructor(name, startDate) {
     this.name = name;
@@ -18,7 +19,6 @@ class Route {
   };
 
   blocksTravelled() {
-    let eastWest = ['1st Avenue', '2nd Avenue', '3rd Avenue', 'Lexington Avenue', 'Park', 'Madison Avenue', '5th Avenue'];
     let horizontalBlocks = eastWest.indexOf(this.beginningLocation.horizontal) - eastWest.indexOf(this.endingLocation.horizontal);
     let verticalBlocks = Math.abs(this.beginningLocation.vertical - this.endingLocation.vertical);
     return (Math.abs(horizontalBlocks) + verticalBlocks);
