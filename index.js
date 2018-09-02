@@ -19,8 +19,8 @@ class Route {
     this.endingLocation = endingLocation;
   };
 
-  calculateHorizontal() {
-    return eastWest.indexOf();
+  calculateHorizontal(avenue) {
+    return eastWest.indexOf(avenue);
   };
 
   blocksTravelled() {
