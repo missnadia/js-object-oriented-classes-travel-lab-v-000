@@ -29,7 +29,7 @@ class Route {
     ];
     let horizontalBlocks = eastWest.indexOf(this.beginningLocation.horizontal) - eastWest.indexOf(this.endingLocation.horizontal);
     let verticalBlocks = Math.abs(this.beginningLocation.vertical - this.endingLocation.vertical);
-    return Math.abs(horizontalBlocks) + verticalBlocks
+    return (Math.abs(horizontalBlocks) + verticalBlocks);
   };
 
   estimatedTime(true) {
