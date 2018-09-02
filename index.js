@@ -1,5 +1,3 @@
-let eastWest = ['1st Avenue', '2nd Avenue', '3rd Avenue', 'Lexington Avenue', 'Park', 'Madison Avenue', '5th Avenue'];
-
 class Driver {
   constructor(name, startDate) {
     this.name = name;
@@ -19,14 +17,13 @@ class Route {
     this.endingLocation = endingLocation;
   };
 
-  calculateHorizontal(avenue) {
-    return eastWest.indexOf(avenue);
-  };
-
   blocksTravelled() {
-    let horizontalBlocks = this.calculateHorizontal(this.beginningLocation.horizontal) - this.calculateHorizontal(this.endingLocation.horizontal);
-    let verticalBlocks = this.beginningLocation.vertical - this.endingLocation.vertical;
-    return (Math.abs(horizontalBlocks) + Math.abs(verticalBlocks));
+    let eastWest = ['1st Avenue', '2nd Avenue', '3rd Avenue', 'Lexington Avenue', 'Park', 'Madison Avenue', '5th Avenue'];
+    let beginningHorizontal = return eastWest.indexOf(this.beginningLocation.horizontal);
+    let endingHorizontal = return eastWest.indexOf(this.endingLocation.horizontal);
+    let horizontalBlocks = Math.abs(beginningHorizontal - endingHorizontal);
+    let verticalBlocks = Math.abs(this.beginningLocation.vertical - this.endingLocation.vertical);
+    return horizontalBlocks + verticalBlocks;
   };
 
   estimatedTime(peak) {
