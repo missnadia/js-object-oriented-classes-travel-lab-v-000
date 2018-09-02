@@ -19,9 +19,7 @@ class Route {
 
   blocksTravelled() {
     let eastWest = ['1st Avenue', '2nd Avenue', '3rd Avenue', 'Lexington Avenue', 'Park', 'Madison Avenue', '5th Avenue'];
-    let beginningHorizontal = return eastWest.indexOf(this.beginningLocation.horizontal);
-    let endingHorizontal = return eastWest.indexOf(this.endingLocation.horizontal);
-    let horizontalBlocks = Math.abs(beginningHorizontal - endingHorizontal);
+    let horizontalBlocks = Math.abs(eastWest.indexOf(this.beginningLocation.horizontal) - eastWest.indexOf(this.endingLocation.horizontal));
     let verticalBlocks = Math.abs(this.beginningLocation.vertical - this.endingLocation.vertical);
     return horizontalBlocks + verticalBlocks;
   };
