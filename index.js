@@ -19,11 +19,12 @@ class Route {
     this.endingLocation = endingLocation;
   };
 
-  blocksTravelled() {
+  calculateHorizontal() {
+    return eastWest.indexOf();
+  };
 
-    let beginningHorizontal = return eastWest.indexOf(this.beginningLocation.horizontal);
-    let endingHorizontal = return eastWest.indexOf(this.endingLocation.horizontal);
-    let horizontalBlocks = Math.abs(beginningHorizontal - endingHorizontal);
+  blocksTravelled() {
+    let horizontalBlocks = Math.abs(calculateHorizontal(this.beginningLocation.horizontal));
     let verticalBlocks = Math.abs(this.beginningLocation.vertical - this.endingLocation.vertical);
     return horizontalBlocks + verticalBlocks;
   };
