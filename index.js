@@ -18,18 +18,18 @@ class Route {
     this.beginningLocation = beginningLocation;
     this.endingLocation = endingLocation;
   };
-
+/*
   calculateHorizontal(avenue) {
     return eastWest.indexOf(avenue);
   };
-/*
+
   blocksTravelled() {
     let horizontalBlocks = this.calculateHorizontal(this.beginningLocation.horizontal) - this.calculateHorizontal(this.endingLocation.horizontal);
     let verticalBlocks = this.beginningLocation.vertical - this.endingLocation.vertical;
     return (Math.abs(horizontalBlocks) + Math.abs(verticalBlocks));
   };
-*/
-/*  estimatedTime(true) {
+
+  estimatedTime(true) {
     if (true) {
       return this.blocksTravelled() / 2;
     } else {
