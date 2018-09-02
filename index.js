@@ -24,7 +24,7 @@ class Route {
   };
 
   blocksTravelled() {
-    let horizontalBlocks = Math.abs(calculateHorizontal(this.beginningLocation.horizontal));
+    let horizontalBlocks = Math.abs(calculateHorizontal(this.beginningLocation.horizontal) - calculateHorizontal(this.endingLocation.horizontal));
     let verticalBlocks = Math.abs(this.beginningLocation.vertical - this.endingLocation.vertical);
     return horizontalBlocks + verticalBlocks;
   };
