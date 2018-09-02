@@ -29,7 +29,7 @@ class Route {
     return (Math.abs(horizontalBlocks) + Math.abs(verticalBlocks));
   };
 
-  estimatedTime(true) {
+/*  estimatedTime(true) {
     if (true) {
       return this.blocksTravelled() / 2;
     } else {
@@ -37,3 +37,4 @@ class Route {
     };
   };
 };
+*/
