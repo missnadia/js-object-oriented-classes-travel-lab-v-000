@@ -27,7 +27,7 @@ class Route {
       'Madison Avenue',
       '5th Avenue'
     ];
-    let horizontalBlocks = Math.abs(this.beginningLocation.horizontal - this.endingLocation.horizontal);
+    let horizontalBlocks = Math.abs(eastWest.indexOf(this.beginningLocation.horizontal) - eastWest.indexOf(this.endingLocation.horizontal));
     let verticalBlocks = Math.abs(this.beginningLocation.vertical - this.endingLocation.vertical);
     return horizontalBlocks + verticalBlocks
   };
